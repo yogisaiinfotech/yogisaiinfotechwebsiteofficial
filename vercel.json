@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm --prefix yogisaitech run build",
+  "outputDirectory": "yogisaitech/dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}

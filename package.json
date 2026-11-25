@@ -1,0 +1,9 @@
+{
+  "name": "yogisaiinfotech-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix yogisaitech run build",
+    "dev": "npm --prefix yogisaitech run dev",
+    "preview": "npm --prefix yogisaitech run preview"
+  }
+}
