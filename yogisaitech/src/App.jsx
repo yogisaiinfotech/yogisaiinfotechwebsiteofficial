@@ -99,7 +99,7 @@ export default function App() {
   const [serviceFilter, setServiceFilter] = useState("all");
   const [workFilter, setWorkFilter] = useState("All");
   const [copiedText, setCopiedText] = useState("");
-  const [form, setForm] = useState({ name: "", phone: "", service: "", message: "" });
+  const [form, setForm] = useState({ name: "", mobile: "", email: "", service: "", message: "" });
 
   const t = content[lang];
   const navIds = ["home", "about", "services", "work", "contact"];
@@ -127,7 +127,7 @@ export default function App() {
 
   const submitForm = (e) => {
     e.preventDefault();
-    const msg = `Hello YogisaiInfotech!\nName: ${form.name}\nPhone: ${form.phone}\nService: ${form.service}\nDetails: ${form.message}`;
+    const msg = `Hello YogisaiInfotech!\nName: ${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}\nService: ${form.service}\nDetails: ${form.message}`;
     window.open(waLink(msg), "_blank", "noopener,noreferrer");
   };
 
@@ -147,6 +147,11 @@ export default function App() {
             <span className="top-tagline">ERP • Digital Signatures (DSC) • PDF Signer • e-Tender • GeM • ISO • Trademark • Photo Studio • Print</span>
           </div>
           <div className="top-bar-right">
+            <a href={companyInfo.websiteUrl} target="_blank" rel="noreferrer" className="top-contact-link">
+              <Globe2 size={13} />
+              <span>{companyInfo.website}</span>
+            </a>
+            <span className="top-sep">|</span>
             <a href={`tel:${companyInfo.rawPhones[0]}`} className="top-contact-link">
               <Phone size={13} />
               <span>{companyInfo.phones[0]}</span>
@@ -635,6 +640,24 @@ export default function App() {
                   </div>
                 </div>
 
+                {/* Official Website */}
+                <div className="contact-detail-item">
+                  <span className="contact-icon">
+                    <Globe2 size={20} />
+                  </span>
+                  <div>
+                    <small>{t.website}</small>
+                    <a
+                      href={companyInfo.websiteUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="email-link"
+                    >
+                      {companyInfo.website}
+                    </a>
+                  </div>
+                </div>
+
                 {/* Location */}
                 <div className="contact-detail-item">
                   <span className="contact-icon">
@@ -678,16 +701,29 @@ export default function App() {
                 />
               </label>
 
-              <label>
-                {t.phone} *
-                <input
-                  required
-                  type="tel"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  placeholder="+91 89256 17672"
-                />
-              </label>
+              <div className="form-row">
+                <label>
+                  {t.mobile} *
+                  <input
+                    required
+                    type="tel"
+                    value={form.mobile}
+                    onChange={(e) => setForm({ ...form, mobile: e.target.value })}
+                    placeholder="+91 89256 17672"
+                  />
+                </label>
+
+                <label>
+                  {t.email} *
+                  <input
+                    required
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    placeholder="name@company.com"
+                  />
+                </label>
+              </div>
 
               <label>
                 {t.service} *
@@ -752,6 +788,12 @@ export default function App() {
                 <a href={`tel:${companyInfo.rawPhones[0]}`} className="direct-chip">
                   <Phone size={13} /> Call {companyInfo.phones[0]}
                 </a>
+                <a href={`mailto:${companyInfo.email}`} className="direct-chip">
+                  <Mail size={13} /> Email Us
+                </a>
+                <a href={companyInfo.websiteUrl} target="_blank" rel="noreferrer" className="direct-chip">
+                  <Globe2 size={13} /> {companyInfo.website}
+                </a>
               </div>
 
               <small className="form-note">
@@ -771,6 +813,15 @@ export default function App() {
             <p>{t.footerText}</p>
             
             <div className="footer-contact-stack">
+              <a
+                href={companyInfo.websiteUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="footer-contact-link"
+              >
+                <Globe2 size={15} />
+                <span>{companyInfo.website}</span>
+              </a>
               <a
                 href={waLink("Hello YogisaiInfotech, I would like to enquire about your services.")}
                 target="_blank"
