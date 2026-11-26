@@ -99,6 +99,7 @@ export default function App() {
   const [serviceFilter, setServiceFilter] = useState("all");
   const [workFilter, setWorkFilter] = useState("All");
   const [copiedText, setCopiedText] = useState("");
+  const [submissionFeedback, setSubmissionFeedback] = useState("");
   const [form, setForm] = useState({ name: "", mobile: "", email: "", service: "", message: "" });
 
   const t = content[lang];
@@ -125,10 +126,29 @@ export default function App() {
   const serviceMessage = (name) =>
     `Hello YogisaiInfotech, I would like to know more about ${name}.`;
 
-  const submitForm = (e) => {
-    e.preventDefault();
+  const submitViaWhatsApp = (e) => {
+    if (e) e.preventDefault();
+    if (!form.name || !form.mobile || !form.email || !form.service || !form.message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
     const msg = `Hello YogisaiInfotech!\nName: ${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}\nService: ${form.service}\nDetails: ${form.message}`;
     window.open(waLink(msg), "_blank", "noopener,noreferrer");
+    setSubmissionFeedback("whatsapp");
+  };
+
+  const submitViaEmail = (e) => {
+    if (e) e.preventDefault();
+    if (!form.name || !form.mobile || !form.email || !form.service || !form.message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+    const subject = `New Business Enquiry: ${form.service} - ${form.name}`;
+    const body = `Dear YogisaiInfotech Team,\n\nI would like to submit a business enquiry through your official website (www.yogisaiinfotech.com):\n\n• Client Name / Company: ${form.name}\n• Mobile Number: ${form.mobile}\n• Email Address: ${form.email}\n• Service Required: ${form.service}\n\n• Project / Requirement Details:\n${form.message}\n\nPlease get in touch with me at your earliest convenience.\n\nBest Regards,\n${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}`;
+
+    const mailtoUrl = `mailto:${companyInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+    setSubmissionFeedback("email");
   };
 
   const copyToClipboard = (text, label) => {
@@ -139,12 +159,21 @@ export default function App() {
 
   return (
     <div className="site-shell">
-      {/* Top Notification & Quick Contact Bar */}
+      {/* Top Notification & Quick Contact Bar with Moveable Ticker */}
       <div className="top-bar">
         <div className="container top-bar-inner">
           <div className="top-bar-left">
             <span className="top-badge">Verified IT, Compliance & Studio</span>
-            <span className="top-tagline">ERP • Digital Signatures (DSC) • PDF Signer • e-Tender • GeM • ISO • Trademark • Photo Studio • Print</span>
+            <div className="top-ticker" title="Services Ticker - Hover to pause">
+              <div className="top-ticker-track">
+                <span className="ticker-text">
+                  ERP Solutions • Invoicing Software • Inventory • Payroll • Websites & Web Apps • Class 3 Digital Signatures (DSC) • PDF Signer Software • Auto PDF Signer • PDF Signer API • e-Tender Filing & Training • GeM Registration • ISO Certification • Trademark Registration • Photo Studio • Logo, Brochure, Visiting Card, Banner & Flex Design •
+                </span>
+                <span className="ticker-text" aria-hidden="true">
+                  ERP Solutions • Invoicing Software • Inventory • Payroll • Websites & Web Apps • Class 3 Digital Signatures (DSC) • PDF Signer Software • Auto PDF Signer • PDF Signer API • e-Tender Filing & Training • GeM Registration • ISO Certification • Trademark Registration • Photo Studio • Logo, Brochure, Visiting Card, Banner & Flex Design •
+                </span>
+              </div>
+            </div>
           </div>
           <div className="top-bar-right">
             <a href={companyInfo.websiteUrl} target="_blank" rel="noreferrer" className="top-contact-link">
@@ -680,7 +709,7 @@ export default function App() {
             </div>
 
             {/* Interactive Form with All 20 Services in Option Groups */}
-            <form className="contact-form" onSubmit={submitForm}>
+            <form className="contact-form" onSubmit={submitViaEmail}>
               <div className="form-heading">
                 <div>
                   <h3>Send an Enquiry</h3>
@@ -779,9 +808,32 @@ export default function App() {
                 />
               </label>
 
-              <button className="button button-primary form-submit" type="submit">
-                {t.send} <ArrowUpRight size={17} />
-              </button>
+              <div className="form-submit-grid">
+                <button className="button button-primary form-submit-btn" type="submit">
+                  <Mail size={16} /> {t.sendEmail || "Send to Official Email"}
+                </button>
+                <button
+                  type="button"
+                  onClick={submitViaWhatsApp}
+                  className="button button-whatsapp form-submit-btn"
+                >
+                  <MessageCircle size={16} /> {t.sendWhatsApp || "Send via WhatsApp"}
+                </button>
+              </div>
+
+              {submissionFeedback === "email" && (
+                <div className="form-feedback-card success">
+                  <CheckCircle2 size={16} />
+                  <span>Enquiry formatted for <b>{companyInfo.email}</b>. Your mail app has been opened to send!</span>
+                </div>
+              )}
+
+              {submissionFeedback === "whatsapp" && (
+                <div className="form-feedback-card success">
+                  <CheckCircle2 size={16} />
+                  <span>Enquiry formatted and opened in <b>WhatsApp</b>!</span>
+                </div>
+              )}
 
               <div className="form-direct-actions">
                 <span>Or reach us directly:</span>
@@ -797,7 +849,7 @@ export default function App() {
               </div>
 
               <small className="form-note">
-                Your enquiry directly opens in WhatsApp with prefilled details.
+                Send your enquiry directly to our official email ({companyInfo.email}) or connect instantly on WhatsApp.
               </small>
             </form>
           </div>
