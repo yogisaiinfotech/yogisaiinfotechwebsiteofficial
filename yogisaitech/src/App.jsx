@@ -45,7 +45,7 @@ export function BrandLogo({ light = false, compact = false }) {
       aria-label="YogisaiInfotech Home"
     >
       <img
-        src="/brand-logo.jpg"
+        src="/brand-logo.png"
         alt="YogisaiInfotech - IT Solutions, Digital Signature, Compliance, Creative"
         className="brand-logo-img"
       />

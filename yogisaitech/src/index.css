@@ -162,7 +162,7 @@ a {
    HEADER & PROFESSIONAL BRAND LOGO
    ========================================= */
 .header {
-  height: 94px;
+  height: 88px;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -195,29 +195,26 @@ a {
 }
 
 .brand-logo-img {
-  height: 70px;
+  height: 58px;
   width: auto;
-  max-width: 320px;
+  max-width: 280px;
   object-fit: contain;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  filter: contrast(1.02);
 }
 
 /* Footer Dark Mode Logo Presentation */
 .light-mode.brand-container {
   background: #ffffff;
-  padding: 10px 22px;
-  border-radius: 14px;
+  padding: 8px 18px;
+  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   display: inline-flex;
   margin-bottom: 8px;
 }
 
 .light-mode .brand-logo-img {
-  height: 60px;
-  max-width: 270px;
+  height: 50px;
+  max-width: 240px;
 }
 
 .brand-logo-mark {
@@ -2008,21 +2005,21 @@ a {
   }
 
   .header {
-    height: 82px;
+    height: 78px;
   }
 
   .brand-logo-img {
-    height: 56px;
-    max-width: 240px;
+    height: 48px;
+    max-width: 215px;
   }
 
   .light-mode.brand-container {
-    padding: 8px 16px;
+    padding: 7px 14px;
   }
 
   .light-mode .brand-logo-img {
-    height: 48px;
-    max-width: 210px;
+    height: 44px;
+    max-width: 195px;
   }
 
   .brand-container {
@@ -2064,7 +2061,7 @@ a {
   .nav-links {
     display: none;
     position: absolute;
-    top: 82px;
+    top: 78px;
     left: 0;
     right: 0;
     background: #ffffff;
@@ -2446,25 +2443,25 @@ a {
   }
 
   .header {
-    height: 76px;
+    height: 70px;
   }
 
   .nav-links {
-    top: 76px;
+    top: 70px;
   }
 
   .brand-logo-img {
-    height: 50px;
-    max-width: 205px;
+    height: 42px;
+    max-width: 180px;
   }
 
   .light-mode.brand-container {
-    padding: 7px 14px;
+    padding: 6px 12px;
   }
 
   .light-mode .brand-logo-img {
-    height: 42px;
-    max-width: 180px;
+    height: 38px;
+    max-width: 165px;
   }
 
   .brand-container {
@@ -2593,25 +2590,25 @@ a {
 
 @media (max-width: 390px) {
   .header {
-    height: 72px;
+    height: 64px;
   }
 
   .nav-links {
-    top: 72px;
+    top: 64px;
   }
 
   .brand-logo-img {
-    height: 44px;
-    max-width: 175px;
+    height: 36px;
+    max-width: 150px;
   }
 
   .light-mode.brand-container {
-    padding: 6px 10px;
+    padding: 5px 10px;
   }
 
   .light-mode .brand-logo-img {
-    height: 38px;
-    max-width: 160px;
+    height: 34px;
+    max-width: 145px;
   }
 
   .lang-toggle {
