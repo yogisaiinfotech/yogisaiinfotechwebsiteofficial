@@ -34,7 +34,6 @@ export const services = [
   { id: "trademark", icon: "shield-check", group: "compliance", badge: "IP & Legal" },
 
   // 4. Creative Studio, Design & Print Media (Previous Services + Studio)
-  { id: "photostudio", icon: "camera", group: "creative", badge: "Photography" },
   { id: "logo-design", icon: "pen-tool", group: "creative", badge: "Branding" },
   { id: "brochure-design", icon: "book-open", group: "creative", badge: "Marketing" },
   { id: "visiting-card", icon: "contact", group: "creative", badge: "Stationery" },
@@ -48,14 +47,14 @@ export const content = {
     eyebrow: "ENTERPRISE IT • DIGITAL SIGNATURE • COMPLIANCE • CREATIVE STUDIO",
     heroTitle: "Powering your business with modern IT, automation,",
     heroAccent: "compliance & creative design.",
-    heroText: "From ERP, Invoicing, Inventory, Payroll systems and Websites to Class 3 Digital Signatures (DSC), Auto PDF Signer, e-Tender filing, GeM, ISO, Trademark, Photo Studio and Print design — YogisaiInfotech is your complete technology and business growth partner.",
+    heroText: "From ERP, Invoicing, Inventory, Payroll systems and Websites to Class 3 Digital Signatures (DSC), Auto PDF Signer, e-Tender filing, GeM, ISO, Trademark, and Creative Print design — YogisaiInfotech is your complete technology and business growth partner.",
     explore: "Explore all services",
     contact: "Contact Us",
     quickEnquiry: "Quick Enquiry",
     scroll: "Scroll to explore",
     trusted: "ONE TRUSTED PARTNER FOR TECHNOLOGY, COMPLIANCE & CREATIVE STUDIO.",
     introTitle: "Everything your business needs to operate, comply, and stand out.",
-    introText: "YogisaiInfotech brings together enterprise software, paperless digital signing solutions, government compliance registrations, and a full-service creative design and photo studio under one roof.",
+    introText: "YogisaiInfotech brings together enterprise software, paperless digital signing solutions, government compliance registrations, and full-service creative design and print media under one roof.",
 
     // 4 Strategic Pillars
     divisions: [
@@ -75,9 +74,9 @@ export const content = {
         desc: "e-Tender bid filing & training, GeM portal registration, ISO 9001/27001 certifications, and Trademark IP protection."
       },
       {
-        tag: "04 / CREATIVE & STUDIO",
-        title: "Creative Studio, Photography & Print",
-        desc: "Professional Photo Studio, distinctive Logo design, Brochures, Visiting cards, Promotional banners, and Large-format flex designs."
+        tag: "04 / CREATIVE & PRINT",
+        title: "Creative Studio, Design & Print Media",
+        desc: "Distinctive Logo design, Brochures, Visiting cards, Promotional banners, and Large-format flex designs."
       }
     ],
 
@@ -86,22 +85,22 @@ export const content = {
     servicesText: "Browse our comprehensive services across enterprise software, digital security, government compliance, and creative studio.",
     allCategories: "All Solutions",
     categoryTabs: {
-      all: "All Services (20)",
+      all: "All Services (19)",
       tech: "ERP & Tech (6)",
       "digital-sign": "Digital Signature & PDF (4)",
       compliance: "Compliance & Tenders (4)",
-      creative: "Creative Studio & Print (6)"
+      creative: "Creative Studio & Print (5)"
     },
     learnMore: "Enquire about this service",
 
     aboutLabel: "ABOUT YOGISAIINFOTECH",
     aboutTitle: "A trusted single source for technology, compliance, and design.",
-    aboutText: "At YogisaiInfotech, we empower businesses with reliable technology and statutory compliance while making their brand unforgettable. Whether you need custom ERP workflows, automated bulk PDF digital signing, legal support for e-Tendering, GeM, ISO or Trademarks, or standout creative services like professional photo shoots, logo branding, and print collaterals — our dedicated specialists deliver prompt, compliant, and exceptional results.",
+    aboutText: "At YogisaiInfotech, we empower businesses with reliable technology and statutory compliance while making their brand unforgettable. Whether you need custom ERP workflows, automated bulk PDF digital signing, legal support for e-Tendering, GeM, ISO or Trademarks, or standout creative services like custom logo branding, brochures, and print collaterals — our dedicated specialists deliver prompt, compliant, and exceptional results.",
     aboutPoints: [
       "Enterprise ERP, Invoicing, Inventory, Payroll, Websites & Cloud Web Applications",
       "Authorized Class 3 Digital Signature Certificates (DSC) & automated PDF signing suite",
       "Specialized e-Tender filing, GeM onboarding, ISO certification & Trademark legal assistance",
-      "Full-fledged Creative Studio: Photography, Logo, Brochure, Visiting card, Banner & Flex design",
+      "Full-fledged Creative Studio: Logo, Brochure, Visiting card, Banner & Flex design",
       "Dedicated direct phone and WhatsApp support across Tamil Nadu & Pan-India"
     ],
     aboutButton: "Connect with our team",
@@ -110,7 +109,7 @@ export const content = {
     workTitle: "A glimpse of what we create and deliver.",
     workText: "Showcasing our recent implementations across enterprise systems, digital signing workflows, compliance approvals, and creative studio design.",
     all: "All",
-    filterCategories: ["All", "ERP & Tech", "Digital Signing", "Compliance", "Branding & Print", "Photo Studio"],
+    filterCategories: ["All", "ERP & Tech", "Digital Signing", "Compliance", "Branding & Print"],
 
     processLabel: "HOW WE WORK",
     processTitle: "A simple, transparent path from consultation to delivery.",
@@ -164,7 +163,6 @@ export const content = {
       gem: "GeM Registration & Management",
       iso: "ISO Certification",
       trademark: "Trademark Registration",
-      photostudio: "Photo Studio & Commercial Photography",
       "logo-design": "Logo Design & Brand Identity",
       "brochure-design": "Brochure Design",
       "visiting-card": "Visiting Card Design",
@@ -187,7 +185,6 @@ export const content = {
       gem: "Government e-Marketplace vendor onboarding, catalog upload, brand approval, and tender/L1 bid participation.",
       iso: "Complete consultancy, documentation, internal audit assistance, and certification for ISO 9001, 14001, and 27001.",
       trademark: "Brand name & logo protection, thorough trademark search, IP filing, objection reply, and legal registration.",
-      photostudio: "Professional photography studio for corporate portraits, product catalogs, commercial shoots, and digital editing.",
       "logo-design": "Distinctive custom logo concepts, vector guidelines, color palettes, and memorable brand identity packages.",
       "brochure-design": "Visually compelling corporate brochures, tri-folds, product catalogs, and promotional marketing materials.",
       "visiting-card": "Premium visiting card concepts, embossed styles, and executive business card layouts that make a statement.",
@@ -201,14 +198,14 @@ export const content = {
     eyebrow: "நிறுவன தகவல் தொழில்நுட்பம் • டிஜிட்டல் கையொப்பம் • இணக்கம் • கிரியேட்டிவ் ஸ்டுடியோ",
     heroTitle: "நவீன தகவல் தொழில்நுட்பம், ஆட்டோமேஷன்,",
     heroAccent: "அரசு இணக்கம் மற்றும் படைப்பாற்றல் வடிவமைப்பு.",
-    heroText: "ERP, பில்லிங், இருப்பு, சம்பளப்பட்டியல் மேலாண்மை மற்றும் இணையதளங்கள் முதல் Class 3 டிஜிட்டல் கையொப்ப சான்றிதழ்கள் (DSC), Auto PDF Signer, மின்-டெண்டர் தாக்கல், GeM, ISO, டிரேட்மார்க், போட்டோ ஸ்டுடியோ மற்றும் அச்சு வடிவமைப்பு வரை — YogisaiInfotech உங்கள் முழுமையான கூட்டாளர்.",
+    heroText: "ERP, பில்லிங், இருப்பு, சம்பளப்பட்டியல் மேலாண்மை மற்றும் இணையதளங்கள் முதல் Class 3 டிஜிட்டல் கையொப்ப சான்றிதழ்கள் (DSC), Auto PDF Signer, மின்-டெண்டர் தாக்கல், GeM, ISO, டிரேட்மார்க் மற்றும் அச்சு வடிவமைப்பு வரை — YogisaiInfotech உங்கள் முழுமையான கூட்டாளர்.",
     explore: "அனைத்து சேவைகளையும் பார்க்க",
     contact: "தொடர்பு கொள்ள",
     quickEnquiry: "விரைவு விசாரணை",
     scroll: "மேலும் பார்க்க கீழே செல்லவும்",
     trusted: "தொழில்நுட்பம், அரசு இணக்கம் மற்றும் கிரியேட்டிவ் ஸ்டுடியோவிற்கான ஒரே நம்பகமான கூட்டாளர்.",
     introTitle: "உங்கள் வணிகம் செயல்படவும், விதிகளுக்கு இணங்கவும், தனித்து நிற்கவும் தேவையான அனைத்தும்.",
-    introText: "நிறுவன மென்பொருட்கள், டிஜிட்டல் கையொப்ப ஆட்டோமேஷன், அரசு சட்டரீதியான பதிவுகள், மற்றும் முழுமையான கிரியேட்டிவ் டிசைன் & போட்டோ ஸ்டுடியோ சேவைகளை YogisaiInfotech ஒரே கூரையின் கீழ் வழங்குகிறது.",
+    introText: "நிறுவன மென்பொருட்கள், டிஜிட்டல் கையொப்ப ஆட்டோமேஷன், அரசு சட்டரீதியான பதிவுகள், மற்றும் முழுமையான கிரியேட்டிவ் டிசைன் & அச்சு சேவைகளை YogisaiInfotech ஒரே கூரையின் கீழ் வழங்குகிறது.",
 
     divisions: [
       {
@@ -227,33 +224,33 @@ export const content = {
         desc: "மின்-டெண்டர் தாக்கல் & பயிற்சி, GeM அரசு போர்ட்டல் பதிவு, ISO தரச்சான்றிதழ்கள் மற்றும் டிரேட்மார்க் பதிவு சேவைகள்."
       },
       {
-        tag: "04 / கிரியேட்டிவ் & ஸ்டுடியோ",
-        title: "போட்டோ ஸ்டுடியோ, பிராண்டிங் & அச்சு வடிவமைப்பு",
-        desc: "தொழில்முறை போட்டோ ஸ்டுடியோ, லோகோ வடிவமைப்பு, பிரோஷர்கள், விசிட்டிங் கார்டுகள், விளம்பர பேனர்கள் மற்றும் பெரிய ஃப்ளெக்ஸ் வடிவமைப்புகள்."
+        tag: "04 / கிரியேட்டிவ் & அச்சு",
+        title: "பிராண்டிங் & அச்சு வடிவமைப்பு",
+        desc: "லோகோ வடிவமைப்பு, பிரோஷர்கள், விசிட்டிங் கார்டுகள், விளம்பர பேனர்கள் மற்றும் பெரிய ஃப்ளெக்ஸ் வடிவமைப்புகள்."
       }
     ],
 
     servicesLabel: "எங்கள் சேவைகள்",
     servicesTitle: "முழுமையான தொழில்நுட்பம், அரசு இணக்கம் & கிரியேட்டிவ் சேவைகள்.",
-    servicesText: "உங்கள் வணிக வளர்ச்சியை எளிதாக்கும் எங்கள் 20 பிரத்யேக சேவைகளிலிருந்து தேர்வு செய்யுங்கள்.",
+    servicesText: "உங்கள் வணிக வளர்ச்சியை எளிதாக்கும் எங்கள் 19 பிரத்யேக சேவைகளிலிருந்து தேர்வு செய்யுங்கள்.",
     allCategories: "அனைத்து சேவைகளும்",
     categoryTabs: {
-      all: "அனைத்து சேவைகளும் (20)",
+      all: "அனைத்து சேவைகளும் (19)",
       tech: "ERP & தொழில்நுட்பம் (6)",
       "digital-sign": "டிஜிட்டல் கையொப்பம் & PDF (4)",
       compliance: "அரசு பதிவுகள் & இணக்கம் (4)",
-      creative: "கிரியேட்டிவ் ஸ்டுடியோ & அச்சு (6)"
+      creative: "கிரியேட்டிவ் ஸ்டுடியோ & அச்சு (5)"
     },
     learnMore: "இந்த சேவை பற்றி பேசலாம்",
 
     aboutLabel: "YOGISAIINFOTECH பற்றி",
     aboutTitle: "தொழில்நுட்பம், அரசு இணக்கம் மற்றும் பிராண்டிங்கிற்கான ஒரே நம்பகமான தளம்.",
-    aboutText: "YogisaiInfotech நிறுவனத்தில், நவீன வணிகங்களின் அனைத்து தேவைகளையும் ஒரே இடத்தில் பூர்த்தி செய்கிறோம். ERP மென்பொருள் மற்றும் இணையதளங்கள், அரசு டெண்டர்களுக்கு தேவையான Class 3 டிஜிட்டல் கையொப்ப சான்றிதழ்கள் (DSC), பில்களை உடனடியாக கையொப்பமிடும் Auto PDF Signer, GeM, இ-டெண்டர், ISO மற்றும் Trademark பதிவுகள், மற்றும் தொழில்முறை போட்டோ ஸ்டுடியோ, லோகோ, பிரோஷர், விசிட்டிங் கார்டு, பேனர் மற்றும் ஃப்ளெக்ஸ் வடிவமைப்புகள் வரை அனைத்தும் எங்கள் நிபுணர் குழுவால் மிகச் சிறப்பாக செய்து தரப்படுகிறது.",
+    aboutText: "YogisaiInfotech நிறுவனத்தில், நவீன வணிகங்களின் அனைத்து தேவைகளையும் ஒரே இடத்தில் பூர்த்தி செய்கிறோம். ERP மென்பொருள் மற்றும் இணையதளங்கள், அரசு டெண்டர்களுக்கு தேவையான Class 3 டிஜிட்டல் கையொப்ப சான்றிதழ்கள் (DSC), பில்களை உடனடியாக கையொப்பமிடும் Auto PDF Signer, GeM, இ-டெண்டர், ISO மற்றும் Trademark பதிவுகள், மற்றும் லோகோ, பிரோஷர், விசிட்டிங் கார்டு, பேனர் மற்றும் ஃப்ளெக்ஸ் வடிவமைப்புகள் வரை அனைத்தும் எங்கள் நிபுணர் குழுவால் மிகச் சிறப்பாக செய்து தரப்படுகிறது.",
     aboutPoints: [
       "முழுமையான ERP, பில்லிங், இருப்பு, சம்பளப்பட்டியல், இணையதளங்கள் & கிளவுட் இணைய பயன்பாடுகள்",
       "அங்கீகரிக்கப்பட்ட Class 3 டிஜிட்டல் கையொப்ப சான்றிதழ் (DSC) மற்றும் PDF சிக்னர் மென்பொருட்கள்",
       "மின்-டெண்டர் தாக்கல், GeM பதிவு, ISO தரச்சான்றிதழ் & Trademark பதிவுக்கான சட்ட நிபுணர்கள்",
-      "முழுமையான கிரியேட்டிவ் ஸ்டுடியோ: போட்டோகிராபி, லோகோ, பிரோஷர், விசிட்டிங் கார்டு, பேனர் & ஃப்ளெக்ஸ் வடிவமைப்பு",
+      "முழுமையான கிரியேட்டிவ் ஸ்டுடியோ: லோகோ, பிரோஷர், விசிட்டிங் கார்டு, பேனர் & ஃப்ளெக்ஸ் வடிவமைப்பு",
       "தமிழ்நாடு மற்றும் இந்தியா முழுவதும் நேரடி தொலைபேசி & WhatsApp உடனடி உதவி"
     ],
     aboutButton: "எங்கள் குழுவை தொடர்பு கொள்ளுங்கள்",
@@ -262,7 +259,7 @@ export const content = {
     workTitle: "நாங்கள் உருவாக்கிய மென்பொருட்கள் மற்றும் படைப்புகளின் சிறு பார்வை.",
     workText: "நாங்கள் வாடிக்கையாளர்களுக்கு வழங்கிய மென்பொருட்கள், டிஜிட்டல் கையொப்ப அமைப்புகள், அரசு பதிவுகள் மற்றும் கிரியேட்டிவ் ஸ்டுடியோ பணிகளின் மாதிரி தொகுப்பு.",
     all: "அனைத்தும்",
-    filterCategories: ["அனைத்தும்", "ERP & தொழில்நுட்பம்", "டிஜிட்டல் கையொப்பம்", "அரசு பதிவுகள்", "பிராண்டிங் & அச்சு", "போட்டோ ஸ்டுடியோ"],
+    filterCategories: ["அனைத்தும்", "ERP & தொழில்நுட்பம்", "டிஜிட்டல் கையொப்பம்", "அரசு பதிவுகள்", "பிராண்டிங் & அச்சு"],
 
     processLabel: "எங்கள் செயல்முறை",
     processTitle: "யோசனையிலிருந்து நிறைவு வரை எளிய வெளிப்படையான பயணம்.",
@@ -274,7 +271,7 @@ export const content = {
     ],
 
     ctaTitle: "உங்கள் வணிக மென்பொருள், அரசு பதிவுகள் அல்லது வடிவமைப்பைத் தொடங்க தயாரா?",
-    ctaText: "ERP, டிஜிட்டல் கையொப்பம், மின்-டெண்டர், GeM, Trademark அல்லது போட்டோ ஸ்டுடியோ தேவைகளுக்கு இன்றே தொடர்பு கொள்ளுங்கள்.",
+    ctaText: "ERP, டிஜிட்டல் கையொப்பம், மின்-டெண்டர், GeM, Trademark அல்லது பிராண்டிங் தேவைகளுக்கு இன்றே தொடர்பு கொள்ளுங்கள்.",
     ctaButton: "WhatsApp-ல் பேசலாம்",
 
     contactLabel: "தொடர்பு கொள்ள",
@@ -316,7 +313,6 @@ export const content = {
       gem: "GeM அரசு போர்ட்டல் பதிவு",
       iso: "ISO தரச்சான்றிதழ் சேவைகள்",
       trademark: "வர்த்தக முத்திரை (Trademark) பதிவு",
-      photostudio: "போட்டோ ஸ்டுடியோ & போட்டோகிராபி",
       "logo-design": "லோகோ வடிவமைப்பு & பிராண்டிங்",
       "brochure-design": "பிரோஷர் வடிவமைப்பு",
       "visiting-card": "விசிட்டிங் கார்டு வடிவமைப்பு",
@@ -339,7 +335,6 @@ export const content = {
       gem: "அரசு இ-சந்தை (GeM) விற்பனையாளர் பதிவு, தயாரிப்பு பட்டியல் மற்றும் எல்1 ஏல பங்கேற்பு ஆதரவு.",
       iso: "ISO 9001, 14001, 27001 தரச்சான்றிதழ்களுக்கான முழுமையான ஆலோசனை மற்றும் தணிக்கை ஆதரவு.",
       trademark: "பிராண்ட் பெயர் & லோகோ பாதுகாப்பு, விரிவான தேடல், அரசு விண்ணப்பம் மற்றும் சட்டரீதியான சான்றிதழ்.",
-      photostudio: "கார்ப்பரேட் உருவப்படங்கள், தயாரிப்பு பட்டியல்கள், வணிக போட்டோஷூட் மற்றும் டிஜிட்டல் எடிட்டிங்.",
       "logo-design": "தனித்துவமான லோகோ, நிறுவன வண்ணங்கள் மற்றும் முழுமையான பிராண்டிங் வழிகாட்டுதல்கள்.",
       "brochure-design": "நிறுவன தயாரிப்புகள் மற்றும் சேவைகளை நேர்த்தியாக விளக்கும் நவீன பிரோஷர்கள்.",
       "visiting-card": "முதல் பார்வையிலேயே நல்ல தாக்கத்தை ஏற்படுத்தும் உயர்தர வணிக அட்டைகள்.",
@@ -385,13 +380,6 @@ export const projects = [
     group: "tech",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85",
     desc: "Responsive web presence with customer login portal, quotation builder, and pay gateway."
-  },
-  {
-    title: "Photo Studio & Commercial Product Shoot",
-    category: "Photo Studio",
-    group: "creative",
-    image: "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&w=1000&q=85",
-    desc: "High-definition product catalog photography, commercial lighting, and studio retouching."
   },
   {
     title: "Brochures, Flex Hoardings & Promotional Banners",

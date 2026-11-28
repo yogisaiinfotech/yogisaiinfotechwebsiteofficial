@@ -179,18 +179,42 @@ a {
   justify-content: space-between;
 }
 
-/* Professional Logo Styles */
+/* Official Brand Logo Styles */
 .brand-container {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
   cursor: pointer;
-  transition: transform 0.2s;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
 }
 
 .brand-container:hover {
   transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.brand-logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Footer Dark Mode Logo Presentation */
+.light-mode.brand-container {
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+
+.light-mode .brand-logo-img {
+  height: 44px;
+  max-width: 220px;
 }
 
 .brand-logo-mark {
@@ -1984,6 +2008,19 @@ a {
     height: 72px;
   }
 
+  .brand-logo-img {
+    height: 42px;
+    max-width: 190px;
+  }
+
+  .light-mode.brand-container {
+    padding: 6px 12px;
+  }
+
+  .light-mode .brand-logo-img {
+    height: 38px;
+  }
+
   .brand-container {
     gap: 10px;
   }
@@ -2405,7 +2442,21 @@ a {
   }
 
   .header {
-    height: 68px;
+    height: 66px;
+  }
+
+  .brand-logo-img {
+    height: 36px;
+    max-width: 165px;
+  }
+
+  .light-mode.brand-container {
+    padding: 6px 10px;
+  }
+
+  .light-mode .brand-logo-img {
+    height: 32px;
+    max-width: 150px;
   }
 
   .brand-container {

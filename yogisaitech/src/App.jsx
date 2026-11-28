@@ -36,49 +36,19 @@ const iconMap = {
 const waLink = (message) =>
   `https://wa.me/${companyInfo.whatsapp}?text=${encodeURIComponent(message)}`;
 
-// Professional Logo Component
+// Professional Official Brand Logo Component
 export function BrandLogo({ light = false, compact = false }) {
   return (
-    <a href="#home" className={`brand-container ${light ? "light-mode" : "dark-mode"}`} aria-label="YogisaiInfotech Home">
-      <div className="brand-logo-mark">
-        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="brand-svg">
-          <defs>
-            <linearGradient id="ysiGradient" x1="2" y1="2" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#1E40AF" />
-              <stop offset="0.5" stopColor="#2563EB" />
-              <stop offset="1" stopColor="#06B6D4" />
-            </linearGradient>
-            <linearGradient id="ysiAccentGrad" x1="10" y1="10" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#38BDF8" />
-              <stop offset="1" stopColor="#818CF8" />
-            </linearGradient>
-          </defs>
-          {/* Hexagonal Rounded Tech Emblem */}
-          <rect x="2" y="2" width="40" height="40" rx="12" fill="url(#ysiGradient)" />
-          <rect x="3" y="3" width="38" height="38" rx="11" stroke="rgba(255,255,255,0.25)" strokeWidth="1" />
-          
-          {/* YSI Modern Circuit Paths & Nodes */}
-          <path d="M11 13L22 24L33 13" stroke="#FFFFFF" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M22 24V32" stroke="#FFFFFF" strokeWidth="3.2" strokeLinecap="round" />
-          <path d="M14 32H30" stroke="url(#ysiAccentGrad)" strokeWidth="2.8" strokeLinecap="round" />
-          <circle cx="22" cy="18" r="2.2" fill="#38BDF8" />
-          <circle cx="11" cy="13" r="1.5" fill="#FFFFFF" />
-          <circle cx="33" cy="13" r="1.5" fill="#FFFFFF" />
-          <circle cx="22" cy="32" r="1.5" fill="#38BDF8" />
-        </svg>
-      </div>
-
-      <div className="brand-text-block">
-        <div className="brand-title">
-          <span className="brand-first">YOGISAI</span>
-          <span className="brand-second">INFOTECH</span>
-        </div>
-        {!compact && (
-          <span className="brand-tagline">
-            IT SOLUTIONS • DIGITAL SIGNATURE • COMPLIANCE • CREATIVE
-          </span>
-        )}
-      </div>
+    <a
+      href="#home"
+      className={`brand-container ${light ? "light-mode" : "dark-mode"}`}
+      aria-label="YogisaiInfotech Home"
+    >
+      <img
+        src="/brand-logo.jpg"
+        alt="YogisaiInfotech - IT Solutions, Digital Signature, Compliance, Creative"
+        className="brand-logo-img"
+      />
     </a>
   );
 }
@@ -167,10 +137,10 @@ export default function App() {
             <div className="top-ticker" title="Services Ticker - Hover to pause">
               <div className="top-ticker-track">
                 <span className="ticker-text">
-                  ERP Solutions • Invoicing Software • Inventory • Payroll • Websites & Web Apps • Class 3 Digital Signatures (DSC) • PDF Signer Software • Auto PDF Signer • PDF Signer API • e-Tender Filing & Training • GeM Registration • ISO Certification • Trademark Registration • Photo Studio • Logo, Brochure, Visiting Card, Banner & Flex Design •
+                  ERP Solutions • Invoicing Software • Inventory • Payroll • Websites & Web Apps • Class 3 Digital Signatures (DSC) • PDF Signer Software • Auto PDF Signer • PDF Signer API • e-Tender Filing & Training • GeM Registration • ISO Certification • Trademark Registration • Logo, Brochure, Visiting Card, Banner & Flex Design •
                 </span>
                 <span className="ticker-text" aria-hidden="true">
-                  ERP Solutions • Invoicing Software • Inventory • Payroll • Websites & Web Apps • Class 3 Digital Signatures (DSC) • PDF Signer Software • Auto PDF Signer • PDF Signer API • e-Tender Filing & Training • GeM Registration • ISO Certification • Trademark Registration • Photo Studio • Logo, Brochure, Visiting Card, Banner & Flex Design •
+                  ERP Solutions • Invoicing Software • Inventory • Payroll • Websites & Web Apps • Class 3 Digital Signatures (DSC) • PDF Signer Software • Auto PDF Signer • PDF Signer API • e-Tender Filing & Training • GeM Registration • ISO Certification • Trademark Registration • Logo, Brochure, Visiting Card, Banner & Flex Design •
                 </span>
               </div>
             </div>
@@ -331,10 +301,10 @@ export default function App() {
 
               <div className="floating-card card-compliance">
                 <span className="float-icon green">
-                  <Camera size={18} />
+                  <Palette size={18} />
                 </span>
                 <div>
-                  <b>Photo Studio & Creative Branding</b>
+                  <b>Creative Studio & Branding</b>
                   <small>Logo, Brochures & Flex Print</small>
                 </div>
               </div>
@@ -786,8 +756,7 @@ export default function App() {
                     <option value="Trademark Registration">{t.serviceNames.trademark}</option>
                   </optgroup>
 
-                  <optgroup label="Creative Studio, Photography & Print Media">
-                    <option value="Photo Studio & Commercial Photography">{t.serviceNames.photostudio}</option>
+                  <optgroup label="Creative Studio, Graphic Design & Print Media">
                     <option value="Logo Design & Brand Identity">{t.serviceNames["logo-design"]}</option>
                     <option value="Brochure Design">{t.serviceNames["brochure-design"]}</option>
                     <option value="Visiting Card Design">{t.serviceNames["visiting-card"]}</option>
@@ -940,7 +909,6 @@ export default function App() {
           <div className="footer-col">
             <h4>{t.creativeHeading}</h4>
             <div className="footer-links-list">
-              <a href="#services">{t.serviceNames.photostudio}</a>
               <a href="#services">{t.serviceNames["logo-design"]}</a>
               <a href="#services">{t.serviceNames["brochure-design"]}</a>
               <a href="#services">{t.serviceNames["visiting-card"]}</a>
