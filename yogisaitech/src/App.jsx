@@ -96,7 +96,7 @@ export default function App() {
   const serviceMessage = (name) =>
     `Hello YogisaiInfotech, I would like to know more about ${name}.`;
 
-  const submitViaWhatsApp = (e) => {
+  const submitForm = (e) => {
     if (e) e.preventDefault();
     if (!form.name || !form.mobile || !form.email || !form.service || !form.message) {
       alert("Please fill in all required fields.");
@@ -105,20 +105,6 @@ export default function App() {
     const msg = `Hello YogisaiInfotech!\nName: ${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}\nService: ${form.service}\nDetails: ${form.message}`;
     window.open(waLink(msg), "_blank", "noopener,noreferrer");
     setSubmissionFeedback("whatsapp");
-  };
-
-  const submitViaEmail = (e) => {
-    if (e) e.preventDefault();
-    if (!form.name || !form.mobile || !form.email || !form.service || !form.message) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-    const subject = `New Business Enquiry: ${form.service} - ${form.name}`;
-    const body = `Dear YogisaiInfotech Team,\n\nI would like to submit a business enquiry through your official website (www.yogisaiinfotech.com):\n\n• Client Name / Company: ${form.name}\n• Mobile Number: ${form.mobile}\n• Email Address: ${form.email}\n• Service Required: ${form.service}\n\n• Project / Requirement Details:\n${form.message}\n\nPlease get in touch with me at your earliest convenience.\n\nBest Regards,\n${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}`;
-
-    const mailtoUrl = `mailto:${companyInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoUrl;
-    setSubmissionFeedback("email");
   };
 
   const copyToClipboard = (text, label) => {
@@ -173,7 +159,7 @@ export default function App() {
       <header className="header">
         <div className="container nav-wrap">
           <BrandLogo />
-          
+
           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
             {t.nav.map((label, i) => (
               <a
@@ -234,7 +220,7 @@ export default function App() {
                 {t.heroTitle} <span>{t.heroAccent}</span>
               </h1>
               <p className="hero-description">{t.heroText}</p>
-              
+
               <div className="hero-buttons">
                 <a className="button button-primary" href="#services">
                   {t.explore} <ArrowRight size={18} />
@@ -329,7 +315,7 @@ export default function App() {
               <span className="eyebrow">{t.trusted}</span>
               <span className="intro-line" />
             </div>
-            
+
             <SectionHeading title={t.introTitle} text={t.introText} />
 
             <div className="division-grid-four">
@@ -457,7 +443,7 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="about-actions">
                 <a className="button button-dark" href="#contact">
                   {t.aboutButton} <ArrowRight size={17} />
@@ -678,8 +664,8 @@ export default function App() {
               </div>
             </div>
 
-            {/* Interactive Form with All 20 Services in Option Groups */}
-            <form className="contact-form" onSubmit={submitViaEmail}>
+            {/* Interactive Form with All 19 Services in Option Groups */}
+            <form className="contact-form" onSubmit={submitForm}>
               <div className="form-heading">
                 <div>
                   <h3>Send an Enquiry</h3>
@@ -777,25 +763,9 @@ export default function App() {
                 />
               </label>
 
-              <div className="form-submit-grid">
-                <button className="button button-primary form-submit-btn" type="submit">
-                  <Mail size={16} /> {t.sendEmail || "Send to Official Email"}
-                </button>
-                <button
-                  type="button"
-                  onClick={submitViaWhatsApp}
-                  className="button button-whatsapp form-submit-btn"
-                >
-                  <MessageCircle size={16} /> {t.sendWhatsApp || "Send via WhatsApp"}
-                </button>
-              </div>
-
-              {submissionFeedback === "email" && (
-                <div className="form-feedback-card success">
-                  <CheckCircle2 size={16} />
-                  <span>Enquiry formatted for <b>{companyInfo.email}</b>. Your mail app has been opened to send!</span>
-                </div>
-              )}
+              <button className="button button-primary form-submit" type="submit">
+                <MessageCircle size={18} /> {t.send}
+              </button>
 
               {submissionFeedback === "whatsapp" && (
                 <div className="form-feedback-card success">
@@ -818,7 +788,7 @@ export default function App() {
               </div>
 
               <small className="form-note">
-                Send your enquiry directly to our official email ({companyInfo.email}) or connect instantly on WhatsApp.
+                Your enquiry directly opens in WhatsApp with prefilled details.
               </small>
             </form>
           </div>
@@ -832,7 +802,7 @@ export default function App() {
           <div className="footer-brand">
             <BrandLogo light compact={false} />
             <p>{t.footerText}</p>
-            
+
             <div className="footer-contact-stack">
               <a
                 href={companyInfo.websiteUrl}
